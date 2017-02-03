@@ -244,7 +244,7 @@ http {
             proxy_set_header            Host $host;            
             proxy_pass_request_headers  on;
             set $target {{ $location.ExternalAuth.URL }};
-            proxy_pass $target;
+            proxy_pass $target{{ $path }};
         }
         {{ end }}
         
